@@ -1,3 +1,6 @@
-# ignore all external repos under src/
+# Ignore all other repos under src/, but keep chrome-mcp tracked
 src/*
-!src/.gitkeep
+!src/chrome-mcp/
+!src/chrome-mcp/**
+
+.DS_Store

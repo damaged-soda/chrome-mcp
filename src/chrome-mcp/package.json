@@ -1,0 +1,22 @@
+{
+  "name": "chrome-mcp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "chrome-mcp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node dist/selftest.js && node dist/mcp-selftest.js",
+    "start": "npm run build && node dist/cli.js",
+    "mcp": "npm run build && node dist/mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.25.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
