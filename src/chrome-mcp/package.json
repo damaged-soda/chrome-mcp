@@ -10,10 +10,14 @@
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node dist/selftest.js && node dist/mcp-selftest.js",
     "start": "npm run build && node dist/cli.js",
-    "mcp": "npm run build && node dist/mcp-server.js"
+    "mcp": "npm run build && node dist/mcp-server.js",
+    "cdp:selftest": "npm run build && node dist/chrome-cdp-selftest.js",
+    "cdp:actions-selftest": "npm run build && node dist/chrome-cdp-actions-selftest.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.25.3"
+    "@modelcontextprotocol/sdk": "1.25.3",
+    "puppeteer-core": "24.36.0",
+    "zod": "4.3.5"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
